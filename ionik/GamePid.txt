@@ -1,0 +1,4 @@
+org.telegram.messenger
+com.tencent.ig
+skynet.cputhrottlingtest
+com.mobile.legends

@@ -1,0 +1,33 @@
+# not allowed to design without official permission from the script creator 
+
+[package]
+name = "arm64"
+version = "1.0.1"
+edition = "2021"
+description = """
+A utility for optimizing I/O priority settings on Android devices.
+
+This tool automatically adjusts the I/O priority for running applications on Android devices. 
+It detects the running processes, checks if they are part of a predefined list (gamelist.txt), 
+and sets their I/O priority accordingly. It sets high priority for gaming or important apps, 
+and low priority for background processes.
+
+Features:
+- Detects running apps and adjusts their I/O priority.
+- Supports setting high priority for games and important apps.
+- Sets low priority for background or less critical processes.
+- Uses `ionice` to control I/O priority levels.
+"""
+authors = ["@UnixeID <betrix322@gmail.com>"]
+license = "GPL-3.0-or-later"
+homepage = "https://github.com/Betrix-ID"
+
+[dependencies]
+regex = "1.10"
+
+[package.metadata]
+telegram_channel = "https://t.me/Yeye_PID"
+
+[profile.release]
+opt-level = "z"
+strip = "symbols"
